@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Service Bus Explorer</title>
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="node_modules/bootstrap/dist/js/bootstrap.js">
+
+</head>
+
+<body>
+  <h3>Azure Service Bus Explorer</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        Connection String
+      </div>
+      <div class="col-6">
+        <input id="connectionString" width="100%"/>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-primary" id="connectBtn">Connect</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        Queues
+      </div>
+      <div class="col-6">
+        <select id="queueName" width="100%"></select>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-primary" id="receiveMessagesBtn">Receive Messages</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <textarea id="msg" rows="10" cols="90"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <textarea id="logs" rows="10" cols="90"></textarea>
+      </div>
+    </div>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
